@@ -2,6 +2,7 @@ package com.upchiapas.models;
 
 public class Pizza {
 
+
     private int id;
     private String especialidad;
     private float precio;
@@ -34,4 +35,5 @@ public class Pizza {
     public String toString() {
         return "Pizza [id=" + id + ", especialidad=" + especialidad + ", precio=" + precio + "]";
     }
+
 }

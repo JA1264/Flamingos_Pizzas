@@ -4,15 +4,17 @@ public class OrdenCompra {
 
     private int id;
     private String nombrePedido;
-    private int tipoPizza;
+    private String tipoPizza;
+    private String vector[];
+    //private String ordenarBuena;
 
     public OrdenCompra() {
         nombrePedido = "";
         id = 0;
-        tipoPizza = 0;
+        tipoPizza = "";
     }
 
-    public OrdenCompra(String np, int id2, int tp) {
+    public OrdenCompra(String np, int id2, String tp) {
         nombrePedido = np;
         id = id2;
         tipoPizza = tp;
@@ -34,12 +36,35 @@ public class OrdenCompra {
         this.nombrePedido = nombrePedido;
     }
 
-    public int getTipoPizza() {
+    public String getTipoPizza() {
         return tipoPizza;
     }
 
-    public void setTipoPizza(int tipoPizza) {
+    public void setTipoPizza(String tipoPizza) {
         this.tipoPizza = tipoPizza;
+    }
+
+    public OrdenCompra( String vector[] ) {
+        this.vector = vector;
+    }
+
+    public void ordenar() {
+        for( int i = 0; i<vector.length;i++) {
+            for (int j=0; j<vector.length && i != j; j++) {
+                if(vector[i].compareToIgnoreCase(vector[j]) < 0) {
+                    String aux = vector[i];
+                    vector[i] = vector[j];
+                    vector[j] = aux;
+                }
+            }
+        }
+    }
+
+    public void mostrar() {
+        for(String a : vector){
+            System.out.println(a);
+        }
+
     }
 
 }

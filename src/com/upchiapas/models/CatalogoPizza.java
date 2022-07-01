@@ -12,7 +12,7 @@ public class CatalogoPizza {
         }
 
         for(int i =0; i< nombreRecibo.length; i++) {
-            System.out.println("Pizza tipo: "+ nombreRecibo[i]);
+            System.out.println("Especialidad: "+ nombreRecibo[i]);
         }
 
     }
